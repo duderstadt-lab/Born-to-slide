@@ -1,3 +1,5 @@
+<p><img src="https://github.com/mjosch/Born-to-slide/blob/master/graphical_abstract.png" width=“800"></p>
+
 Analysis software package used in:
 
 ### Born to slide: mobile origin licensing factors confer resistance to transcription conflicts
