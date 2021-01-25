@@ -14,21 +14,12 @@ All MARS source code is publicly available in several repositories on Github at 
 The core library used for analysis and storage of data is contained in the mars-core repository. 
 The graphical user interface is contained in the mars-fx repository. Documentation can be found at mars-docs.
 
-2) Replace the following jars in your Fiji installation with the jars provided in https://github.com/mjosch/Born-to-slide/tree/master/MARS_jars
-- mars-autocompletion
-- mars-commands
-- mars-core
-- mars-fmt
-- mars-fx
-- mars-swing
-- mars-trackmate
+2) Download all datasets (organized in archives) from XXX (raw videos are deposited under xxx)
 
-3) Create a local python environment with **born-to-slide.yml**
+3) Download all python scripts and jupyter notebooks from https://github.com/mjosch/Born-to-slide/tree/master/Analysis_software
 
-4) Download all datasets (organized in archives) from XXX (raw videos are deposited under xxx)
+4) Set the location of the dataset folder to the **filepath** variable in **awesome_data.py**
 
-5) Download all python scripts and jupyter notebooks
+5) Create a new python environment with **born-to-slide.yml**
 
-6) Set the location of the dataset folder to the **filepath** variable in **awesome_data.py**
-
-7) Run jupyter notebooks to check out the data in each figure panel
+6) Run jupyter notebooks using environment created in 5. to check out the data in each figure panel
