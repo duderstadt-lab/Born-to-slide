@@ -22,4 +22,4 @@ The graphical user interface is contained in the mars-fx repository. Documentati
 
 5) Create a new python environment with **born-to-slide.yml**
 
-6) Run jupyter notebooks using environment created in 5) to check out the data in each figure panel
+6) Run jupyter notebooks using environment created in 5. to check out the data in each figure panel
