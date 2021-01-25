@@ -206,8 +206,9 @@ class DnaMoleculeArchive(Archive):
 
         self.proteins = set()
         # will find all columns in metadata DataTable with 'ChannelIndex [Protein]'
-        for match in re.findall('ChannelIndex \w+',
-                                '$'.join(table_to_pandas(self.archive_link.getMetadata(0).getDataTable()).columns)):
+        for match in re.findall('ChannelIndex \w+', '$'.join(dict(sc.to_python(
+                self.archive_link.getMetadata(self.metadata_uids[0]).getImage(0).getPlane(0, 0,
+                                                                                          0).getStringFields())).keys())):
             self.proteins.add(match.split()[-1])
 
         # instantiate a new DnaMolecule for each uid and store instances as list
@@ -221,7 +222,7 @@ class DnaMoleculeArchive(Archive):
         self.prefixes = set()
         for molecule in self.molecules:
             self.tags.update(molecule.tags)
-            self.prefixes.update(molecule.prefixes)
+        self.prefixes.update(molecule.prefixes)
 
     def validate_params(self):
         """

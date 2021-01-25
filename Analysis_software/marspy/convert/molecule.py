@@ -17,7 +17,7 @@ class Molecule:
         self.tags = list(sc.to_python(self.archive.get(self.uid).getTags()))
         self.regions = list(sc.to_python(self.archive.get(self.uid).getRegionNames()))
         # don't keep entire df in memory for future versions
-        self.df = table_to_pandas(self.archive.get(self.uid).getDataTable())
+        self.df = table_to_pandas(self.archive.get(self.uid).getTable())
         self.seg_dfs = None
 
     def __str__(self):

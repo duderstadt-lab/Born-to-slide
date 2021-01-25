@@ -22,7 +22,7 @@ print(f'{__name__} initialized.')
 __doc__ = """
 marspy - a Python implementation of our beloved MARS Fiji plugin
 =====================================================================
-v1.1
+v2.0
 @author Matthias Scherr
 
 **marspy** is a Python package providing easy use and access to MARS
