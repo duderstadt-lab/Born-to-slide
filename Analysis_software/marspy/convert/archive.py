@@ -205,10 +205,10 @@ class DnaMoleculeArchive(Archive):
             self.cdc6 = self.archive_link.getMetadata(self.metadata_uids[0]).getStringParameter('cdc6')
 
         self.proteins = set()
+
         # will find all columns in metadata DataTable with 'ChannelIndex [Protein]'
         for match in re.findall('ChannelIndex \w+', '$'.join(dict(sc.to_python(
-                self.archive_link.getMetadata(self.metadata_uids[0]).getImage(0).getPlane(0, 0,
-                                                                                          0).getStringFields())).keys())):
+                self.archive_link.getMetadata(self.metadata_uids[0]).getPlane(0, 0, 0, 0).getStringFields())).keys())):
             self.proteins.add(match.split()[-1])
 
         # instantiate a new DnaMolecule for each uid and store instances as list
@@ -222,7 +222,7 @@ class DnaMoleculeArchive(Archive):
         self.prefixes = set()
         for molecule in self.molecules:
             self.tags.update(molecule.tags)
-        self.prefixes.update(molecule.prefixes)
+            self.prefixes.update(molecule.prefixes)
 
     def validate_params(self):
         """
@@ -386,8 +386,7 @@ def describe_archives(archives):
     for archive in archives:
         _temp_df = pd.DataFrame(index=[archive.name.split('.')[0]],
                                 data=[[len(archive.metadata_uids), len(archive),
-                                       '; '.join([label + '-' + protein for protein, label in
-                                                  DnaMoleculeArchive.instances[0].labels.items()]),
+                                       '; '.join([label + '-' + protein for protein, label in archive.labels.items()]),
                                        archive.nucleotide, archive.highsalt_wash, archive.chromatin,
                                        archive.t7_terminator, archive.validate_params()]],
                                 columns=['# of datasets', '# of molecules', 'labeled proteins', 'nucleotide',
