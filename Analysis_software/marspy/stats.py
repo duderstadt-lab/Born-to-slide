@@ -1,4 +1,3 @@
-import random
 import numpy as np
 from sklearn.utils import resample
 
@@ -11,9 +10,9 @@ def bootstrap(data, n_boot=10000, sample_size=1, estimator=np.mean):
     :param estimator: default np.mean
     :return: list of bootstrap samples
     """
-    random.seed(42)
-    return estimator([resample(data, replace=True, n_samples=int(sample_size * len(data))) for _ in range(n_boot)],
-                     axis=1)
+    return estimator(
+        [resample(data, replace=True, n_samples=int(sample_size * len(data)), random_state=42) for _ in range(n_boot)],
+        axis=1)
 
 
 def calc_ci(data, ci=95):
