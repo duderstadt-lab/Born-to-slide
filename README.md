@@ -1,6 +1,7 @@
 Analysis software package used in:
 
-### Born to slide: mobile origin licensing factors confer resistance to transcription conflicts
+### Mobility of origin licensing factors confers resistance to transcription conflicts
+
 Matthias J Scherr, Syafiq Abd Wahab, Dirk Remus, Karl E Duderstadt  
 
 
