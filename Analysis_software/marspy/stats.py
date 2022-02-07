@@ -11,7 +11,7 @@ def bootstrap(data, n_boot=10000, sample_size=1, estimator=np.mean):
     :return: list of bootstrap samples
     """
     return estimator(
-        [resample(data, replace=True, n_samples=int(sample_size * len(data)), random_state=42) for _ in range(n_boot)],
+        [resample(data, replace=True, n_samples=int(sample_size * len(data))) for _ in range(n_boot)],
         axis=1)
 
 

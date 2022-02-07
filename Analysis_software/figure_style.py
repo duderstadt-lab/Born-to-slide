@@ -27,7 +27,7 @@ def set_style_talk():
 # palettes
 saturation = 0.75
 colors = 8
-palettes = dict(T7=sns.dark_palette(sns.desaturate(color=(1, 0.5, 0), prop=saturation),
+palettes = dict(T7=sns.dark_palette(sns.desaturate(color=(1, 0.5, 0), prop=0.9),
                                     reverse=True, as_cmap=False, n_colors=colors, input='rgb'),
                 ORC=sns.dark_palette(sns.desaturate(color=(0, 1, 0.5), prop=saturation),
                                      reverse=True, as_cmap=False, n_colors=colors, input='rgb'),
@@ -39,4 +39,6 @@ palettes = dict(T7=sns.dark_palette(sns.desaturate(color=(1, 0.5, 0), prop=satur
                                          reverse=True, as_cmap=False, n_colors=8, input='rgb'),
                 OCCM=sns.dark_palette(sns.desaturate(color=(0, 0.75, 0.75), prop=saturation),
                                       reverse=True, as_cmap=False, n_colors=8, input='rgb'),
+                MCM555=sns.dark_palette(sns.desaturate(color=(0.5, 1, 0), prop=saturation),
+                                        reverse=True, as_cmap=False, n_colors=8, input='rgb'),
                 qualitative=sns.color_palette('Set2', 8))

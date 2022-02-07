@@ -206,10 +206,10 @@ class DnaMoleculeArchive(Archive):
 
         self.proteins = set()
 
-        # will find all columns in metadata DataTable with 'ChannelIndex [Protein]'
-        for match in re.findall('ChannelIndex \w+', '$'.join(dict(sc.to_python(
-                self.archive_link.getMetadata(self.metadata_uids[0]).getPlane(0, 0, 0, 0).getStringFields())).keys())):
-            self.proteins.add(match.split()[-1])
+        # will get all columns in DataTable with 'Protein_n_Position_on_Dna'
+        for match in re.findall('\w+_Position_on_DNA', '$'.join(set(sc.to_python(
+                self.archive_link.properties().getColumnSet())))):
+            self.proteins.add(match.split('_')[0])
 
         # instantiate a new DnaMolecule for each uid and store instances as list
         self.molecules = [DnaMolecule(uid, self.proteins, archive=self.archive_link) for uid in
