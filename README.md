@@ -14,7 +14,7 @@ All MARS source code is publicly available in several repositories on Github at 
 The core library used for analysis and storage of data is contained in the mars-core repository. 
 The graphical user interface is contained in the mars-fx repository. Documentation can be found at mars-docs.
 
-2) Request all datasets (organized in archives)
+2) Request all datasets (mostly organized in archives)
 
 3) Download all python scripts and jupyter notebooks from https://github.com/mjosch/Born-to-slide/tree/master/Analysis_software
 
