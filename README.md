@@ -16,7 +16,7 @@ The graphical user interface is contained in the mars-fx repository. Documentati
 
 2) Request all datasets (mostly organized in archives)
 
-3) Download all python scripts and jupyter notebooks from https://github.com/mjosch/Born-to-slide/tree/master/Analysis_software
+3) Download all python scripts and jupyter notebooks from https://github.com/duderstadt-lab/Born-to-slide/tree/master/Analysis_software
 
 4) Set the location of the dataset folder to the **filepath** variable in **awesome_data.py**
 
